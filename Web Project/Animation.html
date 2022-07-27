@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Tutorial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+           background: linear-gradient(pink,yellow);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            width: 400px;
+            background-color: cadetblue;
+            animation: animate 2s ease-in-out infinite alternate;
+            box-shadow: 10px 10px 10px 10px #888888;
+        }
+
+        @keyframes animate {
+            from {
+                height: 300px;
+                width: 400px;
+
+            }
+
+            to {
+                height: 50vh;
+                width: 50vw;
+            }
+        }
+
+        .text {
+            margin-top: 70vh;
+            margin-left: 40vh;
+            font-size: 30px;
+            text-shadow: 5px 10px 2px #81dd09
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>Animation</h2>
+        </div>
+        <div class="text">
+            <p>ANIMATION IN A WEB PAGE  </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

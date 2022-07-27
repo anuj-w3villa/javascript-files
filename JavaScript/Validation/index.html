@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Validation-Email,Password,Name</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&family=Lobster&family=Rubik&family=Secular+One&display=swap"
+        rel="stylesheet"> 
+</head>
+
+<body>
+    <header>
+        <nav class="index-header-navbar">
+            <a href="index.html" class="index-anchor-nav"><p class="para">Register Yourself</p></a>
+            <ul class="index-navbar-ul">
+                <li class="index-navbar-li">Home</li>
+                <li class="index-navbar-li">About</li>
+                <li class="index-navbar-li">Service</li>
+                <a class ="index-anchor-nav" href="contactus.html"><li class="index-navbar-li">Contact us</li></a>
+                <input class="index-nav-search" id="search-nav" type="text">
+                <button class="index-button-navbar">Search</button>
+            </ul>
+        </nav>
+    </header>
+    <section class="registration-form-section">
+        <div class="registration-form-div">
+            <form name="myform" onsubmit=" return validationForm()">
+                <label class="label-style" for="Name">Enter Your Name :</label><br>
+                <input id="nameText" class="area-style" type="text" name="name" value="">
+                <span id="nameId"></span><br>
+
+                <label class="label-style" for="password">Enter Your Password :</label><br>
+                <input id="paswdText" class="area-style" type="password" name="password" value="">
+                <span id="paswdId"></span><br>
+
+                <label class="label-style" for="Email">Enter Your Email :</label><br>
+                <input id="emailText" class="area-style" type="text" name="email" value="">
+                <span id="emailId"></span><br>
+                <input class="register" type="submit" value="Register">
+            </form>
+        </div>
+    </section>
+        <footer class ="footer-home">
+            <p>&copy; Template-Design by Anuj Pal</p>
+        </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

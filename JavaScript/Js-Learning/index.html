@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js-Time-tutorial</title>
+    <style>
+        body {
+            background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),
+                linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%),
+                linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+            height: 100vh;
+
+        }
+
+        h1 {
+            color: black;
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        p {
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 2rem;
+        }
+
+        .button {
+            text-align: center;
+        }
+
+        #but {
+            background-color: yellowgreen;
+            color: brown;
+            font-size: 2rem;
+            padding: 1.2rem;
+            margin: 1.2rem;
+            font-family: 'Times New Roman', Times, serif;
+            width: 15rem;
+            border-radius: .9rem;
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+        .chang{
+            background-color: yellowgreen;
+            color: brown;
+            font-size: 2rem;
+            padding: 1.2rem;
+            margin: 1.2rem;
+            font-family: 'Times New Roman', Times, serif;
+            width: 15rem;
+            border-radius: .9rem;
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Current Date and Time </h1>
+    <p id="date"></p>
+    <p id="time"></p>
+    <div class="button">
+        <button id="but" onclick = "goBack()">Go Back</button>
+    </div>
+    <div class="button">
+        <button class="chang" onclick = "changeColor()">Time Font Change Color</button>
+    </div>
+
+    <script>
+
+        var d = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = d;
+
+        (function () {
+            setInterval(() => {
+                var t = new Date().toLocaleTimeString();
+                document.getElementById("time").innerHTML = t;
+            }, 1000)
+        })();
+
+        function goBack(){
+            window.history.back();
+        }
+
+        function changeColor(){
+            const changeColor = document.querySelector('#time');
+            changeColor.style.color = "Blue"
+        }
+
+
+    </script>
+
+</body>
+
+</html>

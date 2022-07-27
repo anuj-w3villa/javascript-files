@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Report-India </title>
+    <style>
+        body {
+            margin: 0%;
+            padding: 0%;
+            background-color: rgb(39, 143, 7);
+        }
+
+        #main-section {
+            border: 5px solid rgb(6, 4, 85);
+            height: 55vh;
+            width: 55vw;
+            display: block;
+            margin: auto;
+            margin-top: 20vh;
+        }
+
+        h1 {
+            color: whitesmoke;
+            font-size: 2.5rem;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #apiData{
+            color:black;
+            text-align: center;
+            font-size: 1.7rem;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="main-section">
+        <div id="main-div">
+            <h1>India Covid Daily Report</h1>
+            <p id = "apiData"></p>
+        </div>
+    </section>
+
+    <script>
+        fetch('https://api.covid19api.com/summary')
+            .then((apiData) => {
+                return apiData.json();
+            })
+            .then((actualData) => {
+                console.log(actualData);
+                const myData = actualData.Countries[77];
+                document.getElementById('apiData').innerHTML = `<p>The New Cases : ${myData.NewConfirmed}</p><p>The New Death cases :${myData.NewDeaths}</p>
+                <p>The New Death cases :${myData.Date}</p>`;
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+           
+    </script>
+
+</body>
+
+</html>
